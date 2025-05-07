@@ -1,15 +1,23 @@
-# server
+# token-factory-mcp-server
+
+## build
 
 To install dependencies:
 
 ```bash
-bun install
+bun i
 ```
 
 To run:
 
 ```bash
-bun run index.ts
+bun dev
+```
+
+## inspector (test)
+
+```bash
+bun inspector
 ```
 
 This project was created using `bun init` in bun v1.2.9. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
@@ -19,13 +27,25 @@ This project was created using `bun init` in bun v1.2.9. [Bun](https://bun.sh) i
 ```json
 {
   "mcpServers": {
-    "mcp-server": {
+    "token-factory-mcp-server": {
       "command": "npx",
       "args": ["token-factory-mcp-server@latest"]
     }
   }
 }
+```
 
+* for developers
+
+```sh
+bun run build
+```
+
+```json
+ "token-factory-mcp-server": {
+      "command": "node",
+      "args": ["/tmp/token-factory-mcp-server/build/index.js"]
+    }
 ```
 
 ## deployment
